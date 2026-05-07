@@ -24,7 +24,7 @@ const projects = {
     impact:
       "Supported development of a production-oriented analytical instrumentation enclosure system.",
 
-    link: "#"
+    link: "case-studies/lc-system.pdf"
   },
 
   pcr: {
@@ -51,7 +51,7 @@ const projects = {
     impact:
       "Delivered enclosure structure supporting repeated testing and laboratory validation workflows.",
 
-    link: "#"
+    link: "case-studies/pcr-machine.pdf"
   },
 
   ocean: {
@@ -105,7 +105,7 @@ const projects = {
     impact:
       "Developed enclosure concept supporting laboratory equipment reliability and usability.",
 
-    link: "#"
+    link: "case-studies/shaker.pdf"
   },
 
   pump: {
@@ -126,7 +126,7 @@ const projects = {
     impact:
       "Developed working prototype demonstrating core piston-pump principles.",
 
-    link: "#"
+    link: "case-studies/hplc-pump.pdf"
   },
 
   speed: {
@@ -193,8 +193,20 @@ document.querySelectorAll(".project-card")
     document.getElementById("modal-impact")
     .innerText = data.impact;
 
-    document.getElementById("case-link")
-    .href = data.link;
+    // CASE STUDY BUTTON
+    const caseLink =
+    document.getElementById("case-link");
+
+    if(data.link === "#"){
+
+      caseLink.style.display = "none";
+
+    } else {
+
+      caseLink.style.display = "inline-block";
+      caseLink.href = data.link;
+
+    }
 
     // METRICS
     const metrics =
@@ -245,6 +257,7 @@ document.querySelectorAll(".project-card")
 
     }
 
+    // OPEN MODAL
     document.getElementById("modal")
     .style.display = "block";
 
