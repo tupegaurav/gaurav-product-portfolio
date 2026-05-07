@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Gaurav Tupe | Engineering Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="hero">
+
+  <div class="hero-content">
+
+    <p class="eyebrow">
+      AI • PRODUCT ENGINEERING • AUTOMATION
+    </p>
+
+    <h1>Gaurav Tupe</h1>
+
+    <p class="hero-text">
+      Product & Automation Engineer building AI-driven workflows,
+      engineering systems, and technical product solutions across
+      hardware and software environments.
+    </p>
+
+  </div>
+
+</header>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Featured Engineering Systems</h2>
+
+    <p>
+      Selected product engineering and AI workflow projects
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <div class="project-card" data-key="lc">
+
+      <div class="project-top">
+        <span class="tag industry">Industry</span>
+      </div>
+
+      <h3>Liquid Chromatography System</h3>
+
+      <p>
+        Product enclosure and subsystem integration for analytical instrumentation systems.
+      </p>
+
+      <div class="stack">
+        <span>Fusion 360</span>
+        <span>DFM</span>
+        <span>Sheet Metal</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+    <div class="project-card" data-key="pcr">
+
+      <div class="project-top">
+        <span class="tag industry">Industry</span>
+      </div>
+
+      <h3>PCR Machine Enclosure</h3>
+
+      <p>
+        Thermal-aware enclosure design for molecular diagnostics systems.
+      </p>
+
+      <div class="stack">
+        <span>Thermal</span>
+        <span>CAD</span>
+        <span>Prototyping</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+    <div class="project-card" data-key="ocean">
+
+      <div class="project-top">
+        <span class="tag ai">AI System</span>
+      </div>
+
+      <h3>OceanGuard Platform</h3>
+
+      <p>
+        AI-powered coastal monitoring and realtime automation workflows.
+      </p>
+
+      <div class="stack">
+        <span>n8n</span>
+        <span>APIs</span>
+        <span>Dashboards</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section alt">
+
+  <div class="section-title">
+    <h2>Additional Projects</h2>
+  </div>
+
+  <div class="grid">
+
+    <div class="project-card" data-key="shaker">
+
+      <div class="project-top">
+        <span class="tag industry">Industry</span>
+      </div>
+
+      <h3>Bacterial Shaker</h3>
+
+      <p>
+        Sheet metal enclosure system for laboratory shaking equipment.
+      </p>
+
+      <div class="stack">
+        <span>Mechanical</span>
+        <span>Lab Systems</span>
+        <span>Design</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+    <div class="project-card" data-key="pump">
+
+      <div class="project-top">
+        <span class="tag academic">Academic</span>
+      </div>
+
+      <h3>HPLC Piston Pump</h3>
+
+      <p>
+        Precision pumping mechanism using ball screw and cam systems.
+      </p>
+
+      <div class="stack">
+        <span>Fluid Systems</span>
+        <span>Mechanisms</span>
+        <span>Prototype</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+    <div class="project-card" data-key="speed">
+
+      <div class="project-top">
+        <span class="tag academic">Embedded</span>
+      </div>
+
+      <h3>Car Speed Detection</h3>
+
+      <p>
+        Arduino-based realtime speed monitoring system.
+      </p>
+
+      <div class="stack">
+        <span>Arduino</span>
+        <span>Sensors</span>
+        <span>Realtime</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+    <div class="project-card" data-key="web">
+
+      <div class="project-top">
+        <span class="tag academic">Academic</span>
+      </div>
+
+      <h3>Website Development</h3>
+
+      <p>
+        Business websites for healthcare and furniture applications.
+      </p>
+
+      <div class="stack">
+        <span>HTML/CSS</span>
+        <span>Frontend</span>
+        <span>UI Design</span>
+      </div>
+
+      <button class="case-btn">
+        View Case Study
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<div id="modal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close">&times;</span>
+
+    <h2 id="modal-title"></h2>
+
+    <div id="timeline" class="timeline"></div>
+
+    <div class="metric-row" id="modal-metrics"></div>
+
+    <div class="block">
+      <h4>Problem</h4>
+      <p id="modal-problem"></p>
+    </div>
+
+    <div class="block">
+      <h4>Engineering Insight</h4>
+      <p id="modal-insight"></p>
+    </div>
+
+    <div class="block impact">
+      <h4>Outcome</h4>
+      <p id="modal-impact"></p>
+    </div>
+
+    <a id="case-link"
+       class="full-case-btn"
+       target="_blank">
+
+       Open Full Case Study
+
+    </a>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Gaurav Tupe — Product & Engineering Portfolio
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
