@@ -152,6 +152,36 @@ const projects = {
     ]
   },
 
+  pmagentos: {
+    title: "PM Agent OS",
+
+    timeline: [
+      "Architecture",
+      "Agent Orchestration",
+      "Live Deployment"
+    ],
+
+    metrics: [
+      ["Workflows", "AI-Orchestrated"],
+      ["Agents", "Multi-Agent"],
+      ["System", "Deployed"]
+    ],
+
+    problem:
+      "Product managers lacked a unified, AI-assisted operating layer to orchestrate the many workflows involved in running a product.",
+
+    insight:
+      "Designed an agent operating system that coordinates multiple AI agents around core product management workflows, giving PMs a structured, AI-assisted operating layer instead of disconnected point tools.",
+
+    impact:
+      "Shipped a live, working system demonstrating AI-assisted product management orchestration end to end.",
+
+    links: [
+      { label: "Case Study", url: "https://drive.google.com/file/d/1bdYxBEpGcR8rcTfyUprPc-wqaBlsvp82/view?usp=sharing" },
+      { label: "Live Demo", url: "https://agent-nexus-18.lovable.app" }
+    ]
+  },
+
   lc: {
     title: "Liquid Chromatography System",
 
@@ -177,7 +207,7 @@ const projects = {
       "Supported development of a production-oriented analytical instrumentation enclosure system.",
 
     links: [
-      { label: "Case Study", url: "case-studies/lc-system.pdf" }
+      { label: "Case Study", url: "https://drive.google.com/file/d/1LJhufDIFlKm07_3dRtWaPbJypjK4Y7Ob/view?usp=sharing" }
     ]
   },
 
@@ -206,36 +236,7 @@ const projects = {
       "Delivered enclosure structure supporting repeated testing and laboratory validation workflows.",
 
     links: [
-      { label: "Case Study", url: "case-studies/pcr-machine.pdf" }
-    ]
-  },
-
-  shaker: {
-    title: "Bacterial Shaker System",
-
-    timeline: [
-      "Design",
-      "Prototype",
-      "Validation"
-    ],
-
-    metrics: [
-      ["Operation", "Continuous"],
-      ["Vibration", "Reduced"],
-      ["Structure", "Improved"]
-    ],
-
-    problem:
-      "Continuous laboratory shaking systems required stable and serviceable enclosure structures.",
-
-    insight:
-      "Rigid structural layout and modular access improved long-term operational stability.",
-
-    impact:
-      "Developed enclosure concept supporting laboratory equipment reliability and usability.",
-
-    links: [
-      { label: "Case Study", url: "case-studies/shaker.pdf" }
+      { label: "Case Study", url: "https://drive.google.com/file/d/1LBzgja19m06TF-IEbWH38eVHxJw80X-U/view?usp=sharing" }
     ]
   },
 
@@ -258,7 +259,7 @@ const projects = {
       "Developed working prototype demonstrating core piston-pump principles.",
 
     links: [
-      { label: "Case Study", url: "case-studies/hplc-pump.pdf" }
+      { label: "Case Study", url: "https://drive.google.com/file/d/1POPTynJdtOx1r3bXT5_OaqurHpIV8mSI/view?usp=sharing" }
     ]
   },
 
@@ -301,7 +302,9 @@ const projects = {
     impact:
       "Developed responsive websites for healthcare and furniture business applications.",
 
-    links: []
+    links: [
+      { label: "Live Demo", url: "https://vijayas-luxe-beauty.lovable.app" }
+    ]
   }
 
 };
