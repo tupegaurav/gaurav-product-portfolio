@@ -1,287 +1,354 @@
-const projects = {
-
-  lc: {
-    title: "Liquid Chromatography System",
-
-    timeline: [
-      "POC",
-      "Prototype",
-      "Production"
-    ],
-
-    metrics: [
-      ["Subsystems", "Integrated"],
-      ["DFM", "Applied"],
-      ["Workflow", "Validated"]
-    ],
-
-    problem:
-      "Initial enclosure systems lacked structured manufacturability and scalable integration planning.",
-
-    insight:
-      "Early alignment between design, manufacturing, and subsystem workflows reduced downstream redesign effort.",
-
-    impact:
-      "Supported development of a production-oriented analytical instrumentation enclosure system.",
-
-    link: "case-studies/lc-system.pdf"
-  },
-
-  pcr: {
-    title: "PCR Machine Enclosure",
-
-    timeline: [
-      "POC",
-      "Prototype",
-      "Validation"
-    ],
-
-    metrics: [
-      ["Thermal", "Optimized"],
-      ["Serviceability", "Improved"],
-      ["Prototype", "Validated"]
-    ],
-
-    problem:
-      "PCR systems required thermally stable and serviceable enclosure architecture.",
-
-    insight:
-      "Thermal-aware layout planning improved operational usability and future scalability.",
-
-    impact:
-      "Delivered enclosure structure supporting repeated testing and laboratory validation workflows.",
-
-    link: "case-studies/pcr-machine.pdf"
-  },
-
-  ocean: {
-    title: "OceanGuard Monitoring Platform",
-
-    timeline: [
-      "Research",
-      "Workflow",
-      "Dashboard"
-    ],
-
-    metrics: [
-      ["Automation", "Realtime"],
-      ["APIs", "Integrated"],
-      ["Alerts", "AI-driven"]
-    ],
-
-    problem:
-      "Environmental monitoring workflows lacked centralized operational visibility.",
-
-    insight:
-      "Automation orchestration and realtime data pipelines improve risk visibility.",
-
-    impact:
-      "Designed AI-assisted monitoring workflows for environmental intelligence systems.",
-
-    link: "#"
-  },
-
-  shaker: {
-    title: "Bacterial Shaker System",
-
-    timeline: [
-      "Design",
-      "Prototype",
-      "Validation"
-    ],
-
-    metrics: [
-      ["Operation", "Continuous"],
-      ["Vibration", "Reduced"],
-      ["Structure", "Improved"]
-    ],
-
-    problem:
-      "Continuous laboratory shaking systems required stable and serviceable enclosure structures.",
-
-    insight:
-      "Rigid structural layout and modular access improved long-term operational stability.",
-
-    impact:
-      "Developed enclosure concept supporting laboratory equipment reliability and usability.",
-
-    link: "case-studies/shaker.pdf"
-  },
-
-  pump: {
-    title: "HPLC Piston Pump",
-
-    metrics: [
-      ["Mechanisms", "2"],
-      ["Prototype", "Functional"],
-      ["Trade-offs", "Analyzed"]
-    ],
-
-    problem:
-      "Academic environments lacked transparent and affordable HPLC pumping systems.",
-
-    insight:
-      "Mechanical alignment and manufacturability strongly affect precision fluid delivery.",
-
-    impact:
-      "Developed working prototype demonstrating core piston-pump principles.",
-
-    link: "case-studies/hplc-pump.pdf"
-  },
-
-  speed: {
-    title: "Car Speed Detection System",
-
-    metrics: [
-      ["Realtime", "Enabled"],
-      ["Sensors", "Integrated"],
-      ["Platform", "Arduino"]
-    ],
-
-    problem:
-      "Low-cost realtime vehicle speed detection systems were needed for academic experimentation.",
-
-    insight:
-      "Embedded systems can provide affordable realtime monitoring capabilities.",
-
-    impact:
-      "Built and validated Arduino-based vehicle speed monitoring prototype.",
-
-    link: "#"
-  },
-
-  web: {
-    title: "Website Development",
-
-    metrics: [
-      ["Projects", "2"],
-      ["Frontend", "Responsive"],
-      ["Users", "Business-focused"]
-    ],
-
-    problem:
-      "Small businesses lacked structured digital presence and clear service communication.",
-
-    insight:
-      "Simple task-oriented interfaces improve usability and customer engagement.",
-
-    impact:
-      "Developed responsive websites for healthcare and furniture business applications.",
-
-    link: "#"
-  }
-
-};
-
-document.querySelectorAll(".project-card")
-.forEach(card => {
-
-  card.addEventListener("click", () => {
-
-    const key = card.dataset.key;
-    const data = projects[key];
-
-    document.getElementById("modal-title")
-    .innerText = data.title;
-
-    document.getElementById("modal-problem")
-    .innerText = data.problem;
-
-    document.getElementById("modal-insight")
-    .innerText = data.insight;
-
-    document.getElementById("modal-impact")
-    .innerText = data.impact;
-
-    // CASE STUDY BUTTON
-    const caseLink =
-    document.getElementById("case-link");
-
-    if(data.link === "#"){
-
-      caseLink.style.display = "none";
-
-    } else {
-
-      caseLink.style.display = "inline-block";
-      caseLink.href = data.link;
-
-    }
-
-    // METRICS
-    const metrics =
-    document.getElementById("modal-metrics");
-
-    metrics.innerHTML = "";
-
-    data.metrics.forEach(m => {
-
-      const div = document.createElement("div");
-
-      div.className = "metric";
-
-      div.innerHTML = `
-        <strong>${m[1]}</strong>
-        ${m[0]}
-      `;
-
-      metrics.appendChild(div);
-
-    });
-
-    // TIMELINE
-    const timeline =
-    document.getElementById("timeline");
-
-    timeline.innerHTML = "";
-
-    if(data.timeline){
-
-      timeline.style.display = "flex";
-
-      data.timeline.forEach(stage => {
-
-        const div = document.createElement("div");
-
-        div.className = "stage";
-
-        div.innerHTML = stage;
-
-        timeline.appendChild(div);
-
-      });
-
-    } else {
-
-      timeline.style.display = "none";
-
-    }
-
-    // OPEN MODAL
-    document.getElementById("modal")
-    .style.display = "block";
-
-  });
-
-});
-
-// CLOSE BUTTON
-document.querySelector(".close")
-.onclick = () => {
-
-  document.getElementById("modal")
-  .style.display = "none";
-
-};
-
-// OUTSIDE CLICK
-window.onclick = e => {
-
-  if(e.target.id === "modal"){
-
-    document.getElementById("modal")
-    .style.display = "none";
-
-  }
-
-};
+:root{
+  --primary:#6366f1;
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --border:#e2e8f0;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#f1f5f9;
+  color:#111827;
+  line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+  background:
+  linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  );
+
+  color:white;
+  padding:100px 20px;
+}
+
+.hero-content{
+  max-width:1100px;
+  margin:auto;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:13px;
+  opacity:0.85;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:64px;
+  font-weight:800;
+  line-height:1;
+  margin-bottom:24px;
+}
+
+.hero-text{
+  max-width:720px;
+  font-size:20px;
+  opacity:0.92;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.primary{
+  background:white;
+  color:#4f46e5;
+}
+
+.secondary{
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+/* SECTIONS */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+}
+
+.alt{
+  background:#f8fafc;
+}
+
+.section-title{
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#64748b;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
+
+/* CARD */
+
+.project-card{
+  background:white;
+  border-radius:22px;
+  padding:30px;
+  border:1px solid var(--border);
+  transition:0.35s;
+  cursor:pointer;
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.08);
+}
+
+.project-top{
+  display:flex;
+  justify-content:flex-end;
+  margin-bottom:18px;
+}
+
+.tag{
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.industry{
+  background:#dcfce7;
+  color:#166534;
+}
+
+.academic{
+  background:#dbeafe;
+  color:#1d4ed8;
+}
+
+.ai{
+  background:#ede9fe;
+  color:#6d28d9;
+}
+
+.project-card h3{
+  font-size:24px;
+  margin-bottom:14px;
+}
+
+.project-card p{
+  color:#475569;
+  margin-bottom:22px;
+}
+
+.stack{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:24px;
+}
+
+.stack span{
+  background:#f1f5f9;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:13px;
+}
+
+.case-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+
+  background:
+  linear-gradient(
+    135deg,
+    #6366f1,
+    #4f46e5
+  );
+
+  color:white;
+  border-radius:14px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,0.75);
+  backdrop-filter:blur(8px);
+  z-index:999;
+}
+
+.modal-content{
+  background:white;
+  max-width:900px;
+  width:92%;
+  margin:3% auto;
+  padding:40px;
+  border-radius:24px;
+  position:relative;
+
+  max-height:90vh;
+  overflow-y:auto;
+}
+
+.modal-content::-webkit-scrollbar{
+  width:8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb{
+  background:#cbd5e1;
+  border-radius:20px;
+}
+
+.close{
+  position:absolute;
+  right:24px;
+  top:18px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.metric-row{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  margin:30px 0;
+}
+
+.metric{
+  flex:1;
+  min-width:180px;
+  background:#f8fafc;
+  padding:18px;
+  border-radius:16px;
+}
+
+.metric strong{
+  display:block;
+  font-size:24px;
+  color:#4f46e5;
+}
+
+.timeline{
+  display:flex;
+  gap:14px;
+  margin-top:28px;
+  flex-wrap:wrap;
+}
+
+.stage{
+  background:#eef2ff;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:600;
+}
+
+.block{
+  margin-top:26px;
+}
+
+.block h4{
+  margin-bottom:8px;
+}
+
+.impact{
+  background:#eef2ff;
+  padding:22px;
+  border-radius:18px;
+}
+
+.modal-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.full-case-btn{
+  display:inline-block;
+  padding:14px 22px;
+  background:#4f46e5;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-weight:700;
+}
+
+.full-case-btn:hover{
+  background:#4338ca;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#e2e8f0;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+  font-size:42px;
+}
+
+.hero-text{
+  font-size:18px;
+}
+
+.section-title h2{
+  font-size:32px;
+}
+
+.modal-content{
+  padding:24px;
+  max-height:88vh;
+}
+
+.metric{
+  min-width:100%;
+}
+
+}
