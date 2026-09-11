@@ -240,6 +240,81 @@ const projects = {
     ]
   },
 
+  heatbath: {
+    title: "HEATBATH System",
+
+    timeline: [
+      "Design",
+      "DFM Review",
+      "Production-Ready"
+    ],
+
+    metrics: [
+      ["Design", "Production-Ready"],
+      ["Manufacturing", "DFM-Reviewed"],
+      ["Status", "Delivered"]
+    ],
+
+    problem:
+      "The HEATBATH system needed a mechanical design that could move directly from prototype into repeatable, production-ready manufacturing.",
+
+    insight:
+      "Designed and manufactured a production-ready model, applying design-for-manufacturability principles to remove rework and streamline the build process.",
+
+    impact:
+      "Delivered a production-ready HEATBATH system design validated for manufacturing.",
+
+    links: []
+  },
+
+  btcar: {
+    title: "Bluetooth Controlled Car",
+
+    metrics: [
+      ["Control", "Bluetooth"],
+      ["Sensing", "IR Obstacle"],
+      ["Platform", "Arduino"]
+    ],
+
+    problem:
+      "A low-cost embedded platform was needed to demonstrate wireless vehicle control combined with basic obstacle awareness.",
+
+    insight:
+      "Combined an Arduino controller, Bluetooth module, and IR sensor to enable wireless driving with real-time obstacle detection.",
+
+    impact:
+      "Built a working Bluetooth-controlled car with IR-based obstacle sensing.",
+
+    links: []
+  },
+
+  cnclathe: {
+    title: "Miniature CNC Lathe Machine",
+
+    timeline: [
+      "Design",
+      "Manufacturing",
+      "Delivery"
+    ],
+
+    metrics: [
+      ["Client", "Varroc Engineering Ltd."],
+      ["Scale", "Miniature Model"],
+      ["Status", "Delivered"]
+    ],
+
+    problem:
+      "Varroc Engineering Ltd. needed a miniature working model of a CNC lathe machine for demonstration and reference purposes.",
+
+    insight:
+      "Designed and manufactured a scaled-down CNC lathe model, balancing mechanical accuracy with the constraints of a miniature build.",
+
+    impact:
+      "Delivered a completed miniature CNC lathe model as a freelance engagement for Varroc Engineering Ltd.",
+
+    links: []
+  },
+
   pump: {
     title: "HPLC Piston Pump",
 
@@ -261,6 +336,27 @@ const projects = {
     links: [
       { label: "Case Study", url: "https://drive.google.com/file/d/1POPTynJdtOx1r3bXT5_OaqurHpIV8mSI/view?usp=sharing" }
     ]
+  },
+
+  peristaltic: {
+    title: "Peristaltic Pump",
+
+    metrics: [
+      ["Fluid Contact", "None"],
+      ["Prototype", "Functional"],
+      ["Dosing", "Precise"]
+    ],
+
+    problem:
+      "Applications needing precise, contamination-free fluid transfer required a low-maintenance pumping mechanism without direct fluid-to-component contact.",
+
+    insight:
+      "A rotor-and-tubing peristaltic design keeps the fluid path fully enclosed within flexible tubing, simplifying cleaning and reducing wear on moving parts.",
+
+    impact:
+      "Developed a working peristaltic pump prototype suited for precise, low-volume fluid dosing.",
+
+    links: []
   },
 
   speed: {
