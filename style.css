@@ -167,6 +167,11 @@ body{
   color:#6d28d9;
 }
 
+.freelance{
+  background:#ffedd5;
+  color:#9a3412;
+}
+
 .project-card h3{
   font-size:24px;
   margin-bottom:14px;
@@ -308,12 +313,15 @@ body{
 
 .full-case-btn{
   display:inline-block;
-  padding:14px 22px;
+  flex:1 1 140px;
+  text-align:center;
+  padding:14px 18px;
   background:#4f46e5;
   color:white;
   text-decoration:none;
   border-radius:12px;
   font-weight:700;
+  white-space:nowrap;
 }
 
 .full-case-btn:hover{
@@ -349,6 +357,15 @@ footer{
 
 .metric{
   min-width:100%;
+}
+
+.modal-links{
+  flex-direction:column;
+}
+
+.full-case-btn{
+  flex:1 1 auto;
+  width:100%;
 }
 
 }
