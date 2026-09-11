@@ -1,354 +1,435 @@
-:root{
-  --primary:#6366f1;
-  --dark:#0f172a;
-  --light:#f8fafc;
-  --border:#e2e8f0;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-body{
-  font-family:"Inter",sans-serif;
-  background:#f1f5f9;
-  color:#111827;
-  line-height:1.6;
-}
-
-/* HERO */
-
-.hero{
-  background:
-  linear-gradient(
-    135deg,
-    #4f46e5,
-    #6366f1
-  );
-
-  color:white;
-  padding:100px 20px;
-}
-
-.hero-content{
-  max-width:1100px;
-  margin:auto;
-}
-
-.eyebrow{
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:13px;
-  opacity:0.85;
-  margin-bottom:18px;
-}
-
-.hero h1{
-  font-size:64px;
-  font-weight:800;
-  line-height:1;
-  margin-bottom:24px;
-}
-
-.hero-text{
-  max-width:720px;
-  font-size:20px;
-  opacity:0.92;
-  margin-bottom:35px;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-
-.btn{
-  padding:14px 22px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.primary{
-  background:white;
-  color:#4f46e5;
-}
-
-.secondary{
-  border:1px solid rgba(255,255,255,0.3);
-  color:white;
-}
-
-.btn:hover{
-  transform:translateY(-2px);
-}
-
-/* SECTIONS */
-
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:80px 20px;
-}
-
-.alt{
-  background:#f8fafc;
-}
-
-.section-title{
-  margin-bottom:45px;
-}
-
-.section-title h2{
-  font-size:40px;
-  margin-bottom:10px;
-}
-
-.section-title p{
-  color:#64748b;
-}
-
-/* GRID */
-
-.grid{
-  display:grid;
-  grid-template-columns:
-  repeat(auto-fit,minmax(320px,1fr));
-  gap:28px;
-}
-
-/* CARD */
-
-.project-card{
-  background:white;
-  border-radius:22px;
-  padding:30px;
-  border:1px solid var(--border);
-  transition:0.35s;
-  cursor:pointer;
-}
-
-.project-card:hover{
-  transform:translateY(-8px);
-
-  box-shadow:
-  0 20px 40px rgba(0,0,0,0.08);
-}
-
-.project-top{
-  display:flex;
-  justify-content:flex-end;
-  margin-bottom:18px;
-}
-
-.tag{
-  padding:6px 12px;
-  border-radius:999px;
-  font-size:12px;
-  font-weight:700;
-}
-
-.industry{
-  background:#dcfce7;
-  color:#166534;
-}
-
-.academic{
-  background:#dbeafe;
-  color:#1d4ed8;
-}
-
-.ai{
-  background:#ede9fe;
-  color:#6d28d9;
-}
-
-.project-card h3{
-  font-size:24px;
-  margin-bottom:14px;
-}
-
-.project-card p{
-  color:#475569;
-  margin-bottom:22px;
-}
-
-.stack{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:24px;
-}
-
-.stack span{
-  background:#f1f5f9;
-  padding:8px 12px;
-  border-radius:10px;
-  font-size:13px;
-}
-
-.case-btn{
-  width:100%;
-  padding:14px;
-  border:none;
-
-  background:
-  linear-gradient(
-    135deg,
-    #6366f1,
-    #4f46e5
-  );
-
-  color:white;
-  border-radius:14px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-/* MODAL */
-
-.modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(15,23,42,0.75);
-  backdrop-filter:blur(8px);
-  z-index:999;
-}
-
-.modal-content{
-  background:white;
-  max-width:900px;
-  width:92%;
-  margin:3% auto;
-  padding:40px;
-  border-radius:24px;
-  position:relative;
-
-  max-height:90vh;
-  overflow-y:auto;
-}
-
-.modal-content::-webkit-scrollbar{
-  width:8px;
-}
-
-.modal-content::-webkit-scrollbar-thumb{
-  background:#cbd5e1;
-  border-radius:20px;
-}
-
-.close{
-  position:absolute;
-  right:24px;
-  top:18px;
-  font-size:30px;
-  cursor:pointer;
-}
-
-.metric-row{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-  margin:30px 0;
-}
-
-.metric{
-  flex:1;
-  min-width:180px;
-  background:#f8fafc;
-  padding:18px;
-  border-radius:16px;
-}
-
-.metric strong{
-  display:block;
-  font-size:24px;
-  color:#4f46e5;
-}
-
-.timeline{
-  display:flex;
-  gap:14px;
-  margin-top:28px;
-  flex-wrap:wrap;
-}
-
-.stage{
-  background:#eef2ff;
-  padding:12px 18px;
-  border-radius:12px;
-  font-weight:600;
-}
-
-.block{
-  margin-top:26px;
-}
-
-.block h4{
-  margin-bottom:8px;
-}
-
-.impact{
-  background:#eef2ff;
-  padding:22px;
-  border-radius:18px;
-}
-
-.modal-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:28px;
-}
-
-.full-case-btn{
-  display:inline-block;
-  padding:14px 22px;
-  background:#4f46e5;
-  color:white;
-  text-decoration:none;
-  border-radius:12px;
-  font-weight:700;
-}
-
-.full-case-btn:hover{
-  background:#4338ca;
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  background:#e2e8f0;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-  font-size:42px;
-}
-
-.hero-text{
-  font-size:18px;
-}
-
-.section-title h2{
-  font-size:32px;
-}
-
-.modal-content{
-  padding:24px;
-  max-height:88vh;
-}
-
-.metric{
-  min-width:100%;
-}
-
-}
+const projects = {
+
+  inspectlog: {
+    title: "InspectLog — AI-Powered Digital Logbook for Manufacturing QC",
+
+    timeline: [
+      "Requirements",
+      "n8n Pipeline",
+      "GitHub Pages POC"
+    ],
+
+    metrics: [
+      ["Data Entry", "Automated"],
+      ["Validation", "Live Parts List"],
+      ["Pipeline", "Event-Triggered"]
+    ],
+
+    problem:
+      "Manufacturing QC teams relied on manual logbook entry, creating delays and inconsistent inspection records with no live validation against parts data.",
+
+    insight:
+      "Defined product requirements for an AI agent that automates logbook data entry, extracting inspection data from a web app and validating it against a live parts list before writing to Google Sheets. Directed the event/webhook-triggered n8n pipeline design (AI Agent → validation → structured log append).",
+
+    impact:
+      "Shipped a proof-of-concept frontend on GitHub Pages and scoped a v2 upgrade to a richer factory reporting format covering defect-wise breakdowns, rejection weights, and monthly summary views.",
+
+    links: [
+      { label: "Live Demo", url: "https://quality-track-insight.lovable.app/" }
+    ]
+  },
+
+  campus: {
+    title: "Campus Connect — AI-Driven Student Collaboration Platform",
+
+    timeline: [
+      "Strategy",
+      "Wireframes",
+      "PRD & Workflows"
+    ],
+
+    metrics: [
+      ["Workflows", "AI-Assisted"],
+      ["Documentation", "Full PRD"],
+      ["Focus", "Engagement"]
+    ],
+
+    problem:
+      "Students lacked a unified platform for task management, peer communication, and coordination across group work.",
+
+    insight:
+      "Designed AI-assisted collaboration workflows covering task management, peer communication, and student coordination, delivered as a full PRD, wireframes, and end-to-end product workflows for a scalable campus platform.",
+
+    impact:
+      "Built AI-powered productivity features with a focus on measurable teamwork and engagement outcomes.",
+
+    links: [
+      { label: "PRD", url: "https://drive.google.com/file/d/1DyEpRd_ACBpHY9J-YYsXfCua7cOsJGfH/view?usp=sharing" },
+      { label: "Live Demo", url: "https://tupegaurav.github.io/campus-connect/index.html" },
+      { label: "GitHub", url: "https://github.com/tupegaurav/campus-connect" }
+    ]
+  },
+
+  ocean: {
+    title: "OceanGuard — Real-Time Coastal Risk Monitoring Platform",
+
+    timeline: [
+      "Research",
+      "Pipeline Design",
+      "Alerts & Dashboard"
+    ],
+
+    metrics: [
+      ["Monitoring", "Automated"],
+      ["Alerts", "Realtime"],
+      ["Architecture", "Automation-First"]
+    ],
+
+    problem:
+      "Coastal risk monitoring required continuous environmental tracking without centralized operational visibility or automated alerting.",
+
+    insight:
+      "Designed and deployed automated environmental monitoring pipelines using n8n, the Open-Meteo API, and the Telegram Bot API, engineering real-time operational alert systems with an automation-first architecture for coastal risk intelligence.",
+
+    impact:
+      "Produced full PRD documentation covering decision-support logic, risk thresholds, and system workflows.",
+
+    links: [
+      { label: "PRD", url: "https://drive.google.com/file/d/1hxCoJdyHdhwVvgvTOoarknrRcNh9IWYU/view?usp=sharing" },
+      { label: "Live Demo", url: "https://tupegaurav.github.io/oceanguard/" },
+      { label: "GitHub", url: "https://github.com/tupegaurav/oceanguard" }
+    ]
+  },
+
+  vitalflow: {
+    title: "VitalFlow — Multi-Agent Post-Discharge Patient Monitoring & Clinical Triage",
+
+    timeline: [
+      "Scoping",
+      "AI Triage Agent",
+      "Dashboard & Webhook"
+    ],
+
+    metrics: [
+      ["Check-in", "14-Day Cycle"],
+      ["Channels", "Telegram + Web"],
+      ["Escalation", "AI-Branched"]
+    ],
+
+    problem:
+      "Post-discharge patients lacked a consistent monitoring experience across communication channels, risking missed red-flag symptoms.",
+
+    insight:
+      "Directed the design of an AI agent (Groq/LLaMA) parsing patient replies into structured pain-level, wound-status, and red-flag data, branching into escalation or reassurance flows. Scoped and shipped a 14-day automated check-in system spanning Telegram and web-form channels, converging into one shared AI triage logic.",
+
+    impact:
+      "Delivered a Care Team Dashboard (risk-triage view) and patient check-in form as a connected product surface, backed by a production n8n webhook.",
+
+    links: [
+      { label: "PRD", url: "https://drive.google.com/file/d/1jpfuSyVfd6R3zpkcvqYjGh1Spey-9jOM/view?usp=sharing" },
+      { label: "Live Demo", url: "https://healing-light-guide.lovable.app/" }
+    ]
+  },
+
+  hiresmartly: {
+    title: "Hiresmartly — AI-Powered HR Platform for Resume & JD Analysis",
+
+    timeline: [
+      "Architecture",
+      "5-Agent Pipeline",
+      "PRD & Build Guide"
+    ],
+
+    metrics: [
+      ["Agents", "5"],
+      ["Pipeline", "RAG-Based"],
+      ["Documentation", "PRD + Build Guide"]
+    ],
+
+    problem:
+      "HR teams lacked a structured, scalable way to analyze resumes against job descriptions and surface skill gaps.",
+
+    insight:
+      "Designed a five-agent RAG pipeline (Resume Parser, JD Analyzer, Gap Reasoning Agent, Coach Agent, Orchestrator Router) to help HR teams analyze resumes against job descriptions, adapting a proven orchestration architecture from a prior product into the HR domain.",
+
+    impact:
+      "Produced a full PRD and node-by-node build guide for the five-agent pipeline.",
+
+    links: [
+      { label: "PRD", url: "https://drive.google.com/file/d/1kGZnnucKSOaDUndwIfIdO341GKccejxw/view?usp=sharing" },
+      { label: "Live Demo", url: "https://tupegaurav.github.io/Hiresmartly-/" },
+      { label: "GitHub", url: "https://github.com/tupegaurav/Hiresmartly-" }
+    ]
+  },
+
+  lc: {
+    title: "Liquid Chromatography System",
+
+    timeline: [
+      "POC",
+      "Prototype",
+      "Production"
+    ],
+
+    metrics: [
+      ["Subsystems", "Integrated"],
+      ["DFM", "Applied"],
+      ["Workflow", "Validated"]
+    ],
+
+    problem:
+      "Initial enclosure systems lacked structured manufacturability and scalable integration planning.",
+
+    insight:
+      "Early alignment between design, manufacturing, and subsystem workflows reduced downstream redesign effort.",
+
+    impact:
+      "Supported development of a production-oriented analytical instrumentation enclosure system.",
+
+    links: [
+      { label: "Case Study", url: "case-studies/lc-system.pdf" }
+    ]
+  },
+
+  pcr: {
+    title: "PCR Machine Enclosure",
+
+    timeline: [
+      "POC",
+      "Prototype",
+      "Validation"
+    ],
+
+    metrics: [
+      ["Thermal", "Optimized"],
+      ["Serviceability", "Improved"],
+      ["Prototype", "Validated"]
+    ],
+
+    problem:
+      "PCR systems required thermally stable and serviceable enclosure architecture.",
+
+    insight:
+      "Thermal-aware layout planning improved operational usability and future scalability.",
+
+    impact:
+      "Delivered enclosure structure supporting repeated testing and laboratory validation workflows.",
+
+    links: [
+      { label: "Case Study", url: "case-studies/pcr-machine.pdf" }
+    ]
+  },
+
+  shaker: {
+    title: "Bacterial Shaker System",
+
+    timeline: [
+      "Design",
+      "Prototype",
+      "Validation"
+    ],
+
+    metrics: [
+      ["Operation", "Continuous"],
+      ["Vibration", "Reduced"],
+      ["Structure", "Improved"]
+    ],
+
+    problem:
+      "Continuous laboratory shaking systems required stable and serviceable enclosure structures.",
+
+    insight:
+      "Rigid structural layout and modular access improved long-term operational stability.",
+
+    impact:
+      "Developed enclosure concept supporting laboratory equipment reliability and usability.",
+
+    links: [
+      { label: "Case Study", url: "case-studies/shaker.pdf" }
+    ]
+  },
+
+  pump: {
+    title: "HPLC Piston Pump",
+
+    metrics: [
+      ["Mechanisms", "2"],
+      ["Prototype", "Functional"],
+      ["Trade-offs", "Analyzed"]
+    ],
+
+    problem:
+      "Academic environments lacked transparent and affordable HPLC pumping systems.",
+
+    insight:
+      "Mechanical alignment and manufacturability strongly affect precision fluid delivery.",
+
+    impact:
+      "Developed working prototype demonstrating core piston-pump principles.",
+
+    links: [
+      { label: "Case Study", url: "case-studies/hplc-pump.pdf" }
+    ]
+  },
+
+  speed: {
+    title: "Car Speed Detection System",
+
+    metrics: [
+      ["Realtime", "Enabled"],
+      ["Sensors", "Integrated"],
+      ["Platform", "Arduino"]
+    ],
+
+    problem:
+      "Low-cost realtime vehicle speed detection systems were needed for academic experimentation.",
+
+    insight:
+      "Embedded systems can provide affordable realtime monitoring capabilities.",
+
+    impact:
+      "Built and validated Arduino-based vehicle speed monitoring prototype.",
+
+    links: []
+  },
+
+  web: {
+    title: "Website Development",
+
+    metrics: [
+      ["Projects", "2"],
+      ["Frontend", "Responsive"],
+      ["Users", "Business-focused"]
+    ],
+
+    problem:
+      "Small businesses lacked structured digital presence and clear service communication.",
+
+    insight:
+      "Simple task-oriented interfaces improve usability and customer engagement.",
+
+    impact:
+      "Developed responsive websites for healthcare and furniture business applications.",
+
+    links: []
+  }
+
+};
+
+document.querySelectorAll(".project-card")
+.forEach(card => {
+
+  card.addEventListener("click", () => {
+
+    const key = card.dataset.key;
+    const data = projects[key];
+
+    document.getElementById("modal-title")
+    .innerText = data.title;
+
+    document.getElementById("modal-problem")
+    .innerText = data.problem;
+
+    document.getElementById("modal-insight")
+    .innerText = data.insight;
+
+    document.getElementById("modal-impact")
+    .innerText = data.impact;
+
+    // LINKS (Live Demo / PRD / GitHub / Case Study)
+    const linksWrap =
+    document.getElementById("modal-links");
+
+    linksWrap.innerHTML = "";
+
+    if(data.links && data.links.length){
+
+      linksWrap.style.display = "flex";
+
+      data.links.forEach(link => {
+
+        const a = document.createElement("a");
+
+        a.className = "full-case-btn";
+        a.href = link.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.innerText = link.label;
+
+        linksWrap.appendChild(a);
+
+      });
+
+    } else {
+
+      linksWrap.style.display = "none";
+
+    }
+
+    // METRICS
+    const metrics =
+    document.getElementById("modal-metrics");
+
+    metrics.innerHTML = "";
+
+    data.metrics.forEach(m => {
+
+      const div = document.createElement("div");
+
+      div.className = "metric";
+
+      div.innerHTML = `
+        <strong>${m[1]}</strong>
+        ${m[0]}
+      `;
+
+      metrics.appendChild(div);
+
+    });
+
+    // TIMELINE
+    const timeline =
+    document.getElementById("timeline");
+
+    timeline.innerHTML = "";
+
+    if(data.timeline){
+
+      timeline.style.display = "flex";
+
+      data.timeline.forEach(stage => {
+
+        const div = document.createElement("div");
+
+        div.className = "stage";
+
+        div.innerHTML = stage;
+
+        timeline.appendChild(div);
+
+      });
+
+    } else {
+
+      timeline.style.display = "none";
+
+    }
+
+    // OPEN MODAL
+    document.getElementById("modal")
+    .style.display = "block";
+
+  });
+
+});
+
+// CLOSE BUTTON
+document.querySelector(".close")
+.onclick = () => {
+
+  document.getElementById("modal")
+  .style.display = "none";
+
+};
+
+// OUTSIDE CLICK
+window.onclick = e => {
+
+  if(e.target.id === "modal"){
+
+    document.getElementById("modal")
+    .style.display = "none";
+
+  }
+
+};
