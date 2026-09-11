@@ -299,15 +299,25 @@ body{
   border-radius:18px;
 }
 
+.modal-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
 .full-case-btn{
   display:inline-block;
-  margin-top:28px;
   padding:14px 22px;
   background:#4f46e5;
   color:white;
   text-decoration:none;
   border-radius:12px;
   font-weight:700;
+}
+
+.full-case-btn:hover{
+  background:#4338ca;
 }
 
 footer{
